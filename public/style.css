@@ -1,14 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  display: grid;
+  min-height: 100vh;
+  position: relative;
+  grid-template-rows: 1fr auto;
   background-image: url('./img/background.jpg');
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: -50vw 0;
-  color: #FFFFFF;
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh;
 }
 
 a {
@@ -29,11 +29,8 @@ a {
 }
 
 header {
-  /* margin: 2vw auto 0; */
-  /* width: 90vw; */
   padding: 2vw 5vw;
   display: grid;
-  background-color: rgba(0, 0, 0, 0.8);
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1;
   align-items: center;
@@ -41,7 +38,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  /* height: 20vw; */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 header .logo-link {
@@ -70,16 +67,16 @@ header nav .menu {
 }
 
 main {
-  margin: 25vw auto 0;
   width: 90vw;
+  margin: 25vw auto 0;
 }
 
 main .left h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 10vw;
   font-weight: 700;
-  margin: 0 0 4vw;
   line-height: 1.2;
+  margin: 0 0 4vw;
 }
 
 main .left p {
@@ -93,19 +90,19 @@ main .right form {
 }
 
 main .right form h3 {
+  font-size: 4vw;
   text-align: center;
   margin: 5vw 0 3vw;
-  font-size: 4vw;
 }
 
 main .right form .form-border {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border: 2px solid #D7D7D7;
   border-bottom: 0;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto;
 }
 
 main .right form label {
@@ -126,21 +123,21 @@ main .right form input[type=email] {
 }
 
 main .right form input[type=text],
-main .right form input[type=email] {
+main .right form input[type=email],
+main .right form input.password {
   grid-column: 1 / 13;
 }
 
 main .right form input[type=text],
 main .right form input[type=email],
 main .right form input[type=password] {
-  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 main .right form input.password {
   grid-row: 3 / 4;
-  grid-column: 1 / 13;
   padding-right: 10vw;
 }
 
@@ -152,9 +149,9 @@ main .right form .vis-block {
 }
 
 main .right form input[type=submit] {
+  width: 100%;
   background-color: #2C99ED;
   outline: none;
-  width: 100%;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   cursor: pointer;
@@ -162,10 +159,10 @@ main .right form input[type=submit] {
 
 main .right form p {
   font-size: 2.5vw;
-  margin: 2vw 0;
-  line-height: 1.7;
-  text-align: center;
   color: #D9D9D9;
+  text-align: center;
+  line-height: 1.7;
+  margin: 2vw 0;
 }
 
 main .right form p a {
@@ -173,12 +170,10 @@ main .right form p a {
 }
 
 footer {
-  /* position: absolute;
-  bottom: 0; */
+  font-size: 3vw;
+  padding: 3vw 5vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  padding: 3vw 5vw;
-  font-size: 3vw;
 }
 
 footer .left {
@@ -219,16 +214,16 @@ footer .right ul li:nth-child(even) {
 
 @media screen and (max-width: 619px) {
   header nav .nav-links {
+    padding: 24vw;
+    width: auto;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 2;
-    height: 100vh;
-    width: auto;
     background-color: #000;
-    padding: 24vw;
   }
 
   header nav .nav-links .exit {
@@ -243,9 +238,9 @@ footer .right ul li:nth-child(even) {
   }
 
   header nav .nav-links li:nth-child(n + 2) {
-    margin: 1vw 0;
     font-size: 8vw;
     padding: 4vw 0;
+    margin: 1vw 0;
   }
 
   header nav .nav-links li:nth-child(n + 2):nth-child(-n + 4) {
@@ -262,7 +257,6 @@ footer .right ul li:nth-child(even) {
     display: none;
   }
 
-
   .desktop {
     display: block;
   }
@@ -276,9 +270,9 @@ footer .right ul li:nth-child(even) {
   }
 
   header nav .nav-links li {
-    display: inline-block;
     font-size: 3vw;
     margin: 0 2vw;
+    display: inline-block;
   }
 }
 
@@ -294,9 +288,9 @@ footer .right ul li:nth-child(even) {
 
 @media screen and (min-width: 840px) {
   body {
+    grid-template-rows: auto 1fr auto;
     background-size: cover;
     background-position: center;
-    grid-template-rows: auto 1fr auto;
   }
 
   header {
@@ -307,8 +301,8 @@ footer .right ul li:nth-child(even) {
   header,
   main,
   footer {
-    position: relative;
     margin: 0 auto;
+    position: relative;
   }
 
   main,
@@ -326,8 +320,8 @@ footer .right ul li:nth-child(even) {
   }
 
   header .logo-link img {
-    width: 4vw;
     min-width: 60px;
+    width: 4vw;
     max-width: 100px;
   }
 
@@ -363,8 +357,8 @@ footer .right ul li:nth-child(even) {
   }
 
   main .left p {
-    line-height: 1.3;
     letter-spacing: 1px;
+    line-height: 1.3;
     max-width: 90%;
   }
 
@@ -414,8 +408,8 @@ footer .right ul li:nth-child(even) {
 
   main .right form h3 {
     font-size: 18px;
-    margin: 18px 0;
     letter-spacing: 1px;
+    margin: 18px 0;
   }
 
   main .right form input {
@@ -435,8 +429,8 @@ footer .right ul li:nth-child(even) {
 
   main .right form h3 {
     font-size: 24px;
-    margin: 24px 0;
     letter-spacing: 1px;
+    margin: 24px 0;
   }
 
   main .right form input {
@@ -447,7 +441,6 @@ footer .right ul li:nth-child(even) {
   main .right form p {
     font-size: 15px;
   }
-
 }
 
 @media screen and (min-width: 1020px) and (max-width: 1249px) {
