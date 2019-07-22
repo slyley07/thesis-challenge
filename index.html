@@ -14,120 +14,144 @@
       Stamp
     </title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/reset.css">
     <link rel="stylesheet" href="./public/style.css">
   </head>
   <body>
     <header>
-      <a href='#'>
-        <img src='' alt='Stamp' title='Stamp'>
+      <a class='logo-link' href='#'>
+        <img class='logo' src='./public/img/stamp-2.svg' alt='Stamp' title='Stamp'>
       </a>
 
       <nav>
-        <ul>
-          <li>
-            About
+        <ul class='nav-links' id='nav-links'>
+          <li class='exit' onclick='closeNav()'>
+            <img src='./public/img/close.svg' alt='Close Menu' title='Close Menu'>
           </li>
 
           <li>
-            Integrations
+            <a href='#'>
+              About
+            </a>
           </li>
 
           <li>
-            Pricing
+            <a href='#'>
+              Integrations
+            </a>
           </li>
 
           <li>
-            Contacts
+            <a href='#'>
+              Pricing
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Contacts
+            </a>
           </li>
         </ul>
+
+        <img src='./public/img/menu.svg'  class='mobile menu' id='menu' alt='Mobile Menu' title='Mobile Menu' onclick='openNav()'/>
       </nav>
 
-      <img src='./'  class='mobile' alt='Mobile Menu' title='Mobile Menu' />
     </header>
 
     <main>
       <div class='left'>
+        <!-- Copyedit this a bit -->
         <h1>
           A Simple Way to Organize Your Inspirations
         </h1>
 
+        <!-- Add in credit for the quote -->
         <p>
-          I think what motivates people is not great hate, but great love for other people. -Huey Newton
+          &ldquo;I think what motivates people is not great hate, but great love for other people.&rdquo;
+          <br />
+          -Huey Newton
         </p>
       </div>
 
       <div class='right'>
-        <h3>
-
-        </h3>
-
         <form class='' action='index.html' method='post'>
-          <label for='name' class='hidden'>
-            Name
-          </label>
+          <h3 class='upper'>
+            Sign Up for Free
+          </h3>
 
-          <input type='text' name='name' placeholder='Name'>
+          <div class='form-border'>
+            <label for='name' class='hidden'>
+              Name
+            </label>
 
-          <label for='email' class='hidden'>
-            Email
-          </label>
-          <!-- Changed from 'E-mail' to 'Email' because the original makes it look dated. AP uses 'Email' as well -->
-          <input type='text' name='email' placeholder='Email'>
+            <input type='text' name='name' placeholder='Name'>
 
-          <label for='password' class='hidden'>
-            Password
-          </label>
+            <label for='email' class='hidden'>
+              Email
+            </label>
+            <!-- Changed from 'E-mail' to 'Email' because the original makes it look dated. AP uses 'Email' as well -->
+            <input type='email' name='email' placeholder='Email'>
 
-          <input type='password' name='password' placeholder='Password'>
+            <label for='password' class='hidden'>
+              Password
+            </label>
 
-          <input type="submit" name="" value="Sign Up &gt;">
+            <input class='password' id='password' type='password' name='password' placeholder='Password'>
+
+            <span class='vis-block' onclick='viewPass()'><img id='vis' src='./public/img/vis.svg' alt='View Password' title='View Password'></span>
+          </div>
+
+          <input type="submit" name="" value="Sign Up">
+
+          <p>
+            By clicking &ldquo;Sign Up&rdquo;, I agree to your
+            <br />
+            <a href='#'>
+              Terms of Service
+            </a>
+          </p>
         </form>
 
-        <p>
-          By clicking &ldquo;Sign Up&rdquo;, I agree to your
-          <br />
-          <a href="#">
-            Terms of Service
-          </a>
-        </p>
       </div>
     </main>
+    <footer>
+      <div class='left'>
+        <p>
+          &copy; 2016 Stamp. All Rights Reserved
+        </p>
+      </div>
+
+      <div class='right'>
+        <ul class='upper'>
+          <li>
+            <a href='#'>
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Help
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Terms of Use
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./public/scripts.js" charset="utf-8"></script>
   </body>
-
-  <footer>
-    <div class='left'>
-      <p>
-        &copy; 2016 Stamp. All Rights Reserved
-      </p>
-    </div>
-
-    <div class='right'>
-      <ul>
-        <li>
-          <a href="#">
-            Contact
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            Help
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            Terms of Use
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            Privacy Policy
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
 </html>
